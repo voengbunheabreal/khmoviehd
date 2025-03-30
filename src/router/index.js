@@ -6,6 +6,7 @@ import Khmer from "@/components/Khmer.vue";
 import Thai from "@/components/Thai.vue";
 import Contact from "@/components/Contact.vue";
 
+
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/chinese', name: 'Chinese', component: Chinese },
