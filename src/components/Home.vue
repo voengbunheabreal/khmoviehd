@@ -5,7 +5,7 @@
         :src="currentImage"
         alt="Movie Poster"
         class="object-cover w-full h-full transition-opacity duration-500"
-        :class="{ 'opacity-100': imageLoaded, 'opacity-100': !imageLoaded }"
+        :class="{ 'opacity-100': imageLoaded, 'opacity-': !imageLoaded }"
       />
     </div>
     <div
