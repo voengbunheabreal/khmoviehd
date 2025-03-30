@@ -59,10 +59,11 @@ import Content from "./Content-popular.vue";
 export default {
   setup() {
     const images = ref([
-      "/public/assets/12CMYSK8Zo15.jpg",
-      "/public/assets/uF3slhs26zzZ.jpg",
-      "/public/assets/0uwKKkkhbVSa.jpg",
-    ]);
+      "/assets/12CMYSK8Zo15.jpg",
+      "/assets/uF3slhs26zzZ.jpg",
+      "/assets/0uwKKkkhbVSa.jpg",
+      ]);
+
     const descriptions = ref([
       "Description for Image 1. This could be a longer text about the movie or image.",
       "Description for Image 2. More details can go here, perhaps a short synopsis.",

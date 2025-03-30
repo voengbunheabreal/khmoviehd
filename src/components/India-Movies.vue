@@ -24,12 +24,12 @@
     data() {
       return {
         movies: [
-          { id: 1, title: "ភ្នាក់ងាប្រយុទ្ធ ប៉ាថាន់", image: "/public/Content-image-india/ភ្នាក់ងាប្រយុទ្ធ ប៉ាថាន់.jpg", duration: "1 ម៉ោង 36 នាទី",  },
-          { id: 2, title: "កំពូលចោរ កំពូលល្បិច", image: "/public/Content-image-india/កំពូលចោរ កំពូលល្បិច.jpg", duration: "1 ម៉ោង 40 នាទី",  },
-          { id: 3, title: "អ្នកស៊ើបភ្នែកពិការ", image: "/public/Content-image-india/អ្នកស៊ើបភ្នែកពិការ.jpg", duration: "1 ម៉ោង 57 នាទី", },
-          { id: 4, title: "អង្គរ័ក្សមុខស្រស់ ", image: "/public/Content-image-india/អង្គរ័ក្សមុខស្រស់ .jpg", duration: "2 ម៉ោង 0 នាទី", },
-          { id: 5, title: "កំពូលជើងខ្លាំង", image: "/public/Content-image-india/កំពូលជើងខ្លាំង.jpg", duration: "1 ម៉ោង 30 នាទី",},
-          { id: 6, title: "ខ្មោចនាងរ៉ូបី", image: "/public/Content-image-india/ខ្មោចនាងរ៉ូបី.jpg", duration: "2 ម៉ោង 10 នាទី",  },
+          { id: 1, title: "ភ្នាក់ងាប្រយុទ្ធ ប៉ាថាន់", image: "/Content-image-india/ភ្នាក់ងាប្រយុទ្ធ ប៉ាថាន់.jpg", duration: "1 ម៉ោង 36 នាទី",  },
+          { id: 2, title: "កំពូលចោរ កំពូលល្បិច", image: "/Content-image-india/កំពូលចោរ កំពូលល្បិច.jpg", duration: "1 ម៉ោង 40 នាទី",  },
+          { id: 3, title: "អ្នកស៊ើបភ្នែកពិការ", image: "/Content-image-india/អ្នកស៊ើបភ្នែកពិការ.jpg", duration: "1 ម៉ោង 57 នាទី", },
+          { id: 4, title: "អង្គរ័ក្សមុខស្រស់ ", image: "/Content-image-india/អង្គរ័ក្សមុខស្រស់ .jpg", duration: "2 ម៉ោង 0 នាទី", },
+          { id: 5, title: "កំពូលជើងខ្លាំង", image: "/Content-image-india/កំពូលជើងខ្លាំង.jpg", duration: "1 ម៉ោង 30 នាទី",},
+          { id: 6, title: "ខ្មោចនាងរ៉ូបី", image: "/Content-image-india/ខ្មោចនាងរ៉ូបី.jpg", duration: "2 ម៉ោង 10 នាទី",  },
         ],
       };
     },

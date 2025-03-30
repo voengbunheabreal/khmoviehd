@@ -24,12 +24,12 @@
     data() {
       return {
         movies: [
-          { id: 1, title: "ទេវបុត្រណាចា", image: "/public/Content-imgae-Popular/ទេវបុត្រណាចា.jpg", duration: "1 ម៉ោង 36 នាទី",  },
-          { id: 2, title: "ប្រមាញ់ព្រាយ វគ្គ2", image: "/public/Content-imgae-Popular/ប្រមាញ់ព្រាយ វគ្គ2.jpg", duration: "1 ម៉ោង 40 នាទី",  },
-          { id: 3, title: "សំណើចគ្រួសារសេដ្ឋី​លា", image: "/public/Content-imgae-Popular/សំណើចគ្រួសារសេដ្ឋី​លា.jpg", duration: "1 ម៉ោង 57 នាទី", },
-          { id: 4, title: "ពិភពលោកធំធេង", image: "/public/Content-imgae-Popular/ពិភពលោកធំធេង.jpg", duration: "2 ម៉ោង 0 នាទី", },
-          { id: 5, title: "យុទ្ធសិល្ប៍ពស់ស", image: "/public/Content-imgae-Popular/យុទ្ធសិល្ប៍ពស់ស.jpg", duration: "1 ម៉ោង 30 នាទី",},
-          { id: 6, title: "គម្ពីតែងតាំងទេវតា", image: "/public/Content-imgae-Popular/គម្ពីតែងតាំងទេវតា.jpg", duration: "2 ម៉ោង 10 នាទី",  },
+          { id: 1, title: "ទេវបុត្រណាចា", image: "/Content-imgae-Popular/ទេវបុត្រណាចា.jpg", duration: "1 ម៉ោង 36 នាទី",  },
+          { id: 2, title: "ប្រមាញ់ព្រាយ វគ្គ2", image: "/Content-imgae-Popular/ប្រមាញ់ព្រាយ វគ្គ2.jpg", duration: "1 ម៉ោង 40 នាទី",  },
+          { id: 3, title: "សំណើចគ្រួសារសេដ្ឋី​លា", image: "/Content-imgae-Popular/សំណើចគ្រួសារសេដ្ឋី​លា.jpg", duration: "1 ម៉ោង 57 នាទី", },
+          { id: 4, title: "ពិភពលោកធំធេង", image: "/Content-imgae-Popular/ពិភពលោកធំធេង.jpg", duration: "2 ម៉ោង 0 នាទី", },
+          { id: 5, title: "យុទ្ធសិល្ប៍ពស់ស", image: "/Content-imgae-Popular/យុទ្ធសិល្ប៍ពស់ស.jpg", duration: "1 ម៉ោង 30 នាទី",},
+          { id: 6, title: "គម្ពីតែងតាំងទេវតា", image: "/Content-imgae-Popular/គម្ពីតែងតាំងទេវតា.jpg", duration: "2 ម៉ោង 10 នាទី",  },
         ],
       };
     },
