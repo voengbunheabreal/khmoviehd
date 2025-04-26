@@ -1,9 +1,13 @@
 <template>
   <Navbar />
   <router-view />
-  <Content />
-  <IndiaMovies />
-  
+
+  <!-- Only show Content and IndiaMovies if not on Chinese page -->
+  <div v-if="$route.name !== 'Chinese'">
+    <Content />
+    <IndiaMovies />
+  </div>
+
   <BottomNav />
 </template>
 
@@ -18,6 +22,6 @@ import Content from "./components/Content-popular.vue";
 import IndiaMovies from "./components/India-Movies.vue";
 
 export default {
-  components: { Navbar, BottomNav, Home, Chinese, Thai, Khmer, Content , IndiaMovies },
+  components: { Navbar, BottomNav, Home, Chinese, Thai, Khmer, Content, IndiaMovies },
 };
 </script>

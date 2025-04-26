@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-black text-white p-4 flex items-center justify-between sticky top-0 z-10">
-   <router-link to="/home"><img src="/src/assets/Khmer-Vovie-HD-300-x-80px.png" alt="" class="w-40"></router-link>
+   <router-link to="/"><img src="/src/assets/Khmer-Vovie-HD-300-x-80px.png" alt="" class="w-40"></router-link>
 
     <div class="hidden md:flex space-x-6 text-sm">
       <router-link to="/" class="hover:text-red-500">Home</router-link>

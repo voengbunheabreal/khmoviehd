@@ -1,9 +1,9 @@
 <template>
     <div class="bg-gray-900 text-white p-6">
       <h2 class="text-3xl font-bold mb-4 ">រឿងឥណ្ឌា</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  lg:grid-cols-5 xl:grid-cols-6 gap-6">
         <div v-for="movie in movies" :key="movie.id" class="relative bg-gray-800 rounded-lg overflow-hidden ml-10mt-2">
-          <img :src="movie.image" :alt="movie.title" class="w-full h-64 object-cover" />
+          <img :src="movie.image" :alt="movie.title" class="w-full object-cover" />
           <div class="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-sm" v-if="movie.type === 'សម្ដែង'">
             សម្ដែង
           </div>
