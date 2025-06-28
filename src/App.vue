@@ -1,14 +1,16 @@
 <template>
-  <Navbar />
-  <router-view />
+  <div>
+    <Navbar />
+    <router-view />
 
-  <!-- Only show Content and IndiaMovies if not on Chinese page -->
-  <div v-if="$route.name !== 'Chinese'">
-    <Content />
-    <IndiaMovies />
+    <!-- Only show Content and IndiaMovies if not on Chinese page -->
+    <div v-if="$route.name !== 'Chinese'">
+      <Content />
+      <IndiaMovies />
+    </div>
+
+    <BottomNav />
   </div>
-
-  <BottomNav />
 </template>
 
 <script>
