@@ -1,7 +1,7 @@
 <template>
 
     <div class="bg-gray-900 text-white p-6">
-      <h2 class="text-3xl font-bold mb-4 ">ភាពយន្តថៃកំពុងពេញនិយម</h2>
+      <h2 class="text-3xl font-bold mb-4 ">ភាពយន្តឥណ្ឌាកំពុងពេញនិយម</h2>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  lg:grid-cols-5 xl:grid-cols-6 gap-6">
         <div v-for="movie in movies" :key="movie.id" class="relative bg-gray-800 rounded-lg overflow-hidden ml-10mt-2">
           <img :src="movie.image" :alt="movie.title" class="w-full object-cover" />

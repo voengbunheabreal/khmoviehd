@@ -8,6 +8,7 @@
       <router-link to="/thai" class="hover:text-red-500">Thai</router-link>
       <router-link to="/khmer" class="hover:text-red-500">Khmer</router-link>
       <router-link to="/indonesia" class="hover:text-red-500">Indonesia</router-link>
+      <router-link to="/india" class="hover:text-red-500">India</router-link>
       <router-link to="/contact" class="hover:text-red-500">Contact</router-link>
     </div>
 

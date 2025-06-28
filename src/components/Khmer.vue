@@ -1,126 +1,42 @@
 <template>
-  <div class="relative h-64 sm:h-80 md:h-96 lg:h-screen overflow-hidden">
-    <div class="absolute inset-0 w-full h-full">
-      <img
-        :src="currentImage"
-        alt="Movie Poster"
-        class="object-cover w-full h-full transition-opacity duration-500"
-        :class="{ 'opacity-100': imageLoaded, 'opacity-': !imageLoaded }"
-      />
-    </div>
-    <div
-      class="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 lg:p-10 bg-gradient-to-t from-black/80 to-transparent"
-    >
-      <h1
-        class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2 sm:text-left"
-      >
-        {{ currentTitle }}
-      </h1>
-      <div
-        class="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg mb-2 sm:mb-4  sm:text-left"
-      >
-        {{ currentDetails }}
-      </div>
-      <div
-        class="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg mb-2 sm:mb-4  sm:text-left"
-      >
-        {{ currentDescription }}
-      </div>
-      <div class="flex sm:justify-start ">
-        <button
-          class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 rounded"
-        >
-          ទស្សនាភាពយន្ត
-        </button>
+
+    <div class="bg-gray-900 text-white p-6">
+      <h2 class="text-3xl font-bold mb-4 ">ភាពយន្តខ្មែរកំពុងពេញនិយម</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  lg:grid-cols-5 xl:grid-cols-6 gap-6">
+        <div v-for="movie in movies" :key="movie.id" class="relative bg-gray-800 rounded-lg overflow-hidden ml-10mt-2">
+          <img :src="movie.image" :alt="movie.title" class="w-full object-cover" />
+          <div class="absolute top-2 left-2 bg-red-600 text-white px-2 py-1 rounded text-sm" v-if="movie.type === 'សម្ដែង'">
+            សម្ដែង
+          </div>
+          <div class="absolute top-2 left-2 bg-green-600 text-white px-2 py-1 rounded text-sm" v-if="movie.type === 'ថ្មី'">
+            ថ្មី
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg font-bold">{{ movie.title }}</h3>
+            <p class="text-sm text-gray-400 font-bold">⏳ {{ movie.duration }}</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      class="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-2"
-    >
-      <div
-        v-for="(image, index) in images"
-        :key="index"
-        class="w-4 h-4 border-2 border-white rounded-full cursor-pointer transition-all duration-300"
-        :class="{
-          'bg-white': currentImageIndex === index,
-          'bg-transparent': currentImageIndex !== index,
-        }"
-        @click="setImage(index)"
-      ></div>
-    </div>
-  </div>
-
-</template>
-
-<script>
-import { ref, onMounted, computed } from "vue";
-export default {
-  setup() {
-    const images = ref([
-      "/assets/12CMYSK8Zo15.jpg",
-      "/assets/uF3slhs26zzZ.jpg",
-      "/assets/0uwKKkkhbVSa.jpg",
-      ]);
-
-    const descriptions = ref([
-      "Description for Image 1. This could be a longer text about the movie or image.",
-      "Description for Image 2. More details can go here, perhaps a short synopsis.",
-      "Description for Image 3. Even more text can be added for each image.",
-    ]);
-    const titles = ref([
-      "Title for Image 1",
-      "Title for Image 2",
-      "Title for Image 3",
-    ]);
-    const details = ref([
-      "Details for Image 1. Year, duration, genre, etc.",
-      "Details for Image 2. More details here.",
-      "Details for Image 3. Even more details.",
-    ]);
-
-    const currentImageIndex = ref(0);
-    const imageLoaded = ref(false);
-
-    const currentImage = computed(() => images.value[currentImageIndex.value]);
-    const currentDescription = computed(
-      () => descriptions.value[currentImageIndex.value]
-    );
-    const currentTitle = computed(() => titles.value[currentImageIndex.value]);
-    const currentDetails = computed(
-      () => details.value[currentImageIndex.value]
-    );
-
-    function setImage(index) {
-      imageLoaded.value = false;
-      setTimeout(() => {
-        currentImageIndex.value = index;
-        imageLoaded.value = true;
-      }, 500);
-    }
-
-    onMounted(() => {
-      setInterval(() => {
-        imageLoaded.value = false;
-        setTimeout(() => {
-          currentImageIndex.value =
-            (currentImageIndex.value + 1) % images.value.length;
-          imageLoaded.value = true;
-        }, 500);
-      }, 3000);
-    });
-
-    return {
-      currentImage,
-      currentDescription,
-      currentTitle,
-      currentDetails,
-      imageLoaded,
-      currentImageIndex,
-      images,
-      setImage,
-    };
-  },
-};
-</script>
-
-<style scoped></style>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        movies: [
+          { id: 1, title: "ទេវបុត្រណាចា", image: "/Content-imgae-Popular/ទេវបុត្រណាចា.jpg", duration: "1 ម៉ោង 36 នាទី",  },
+          { id: 2, title: "ប្រមាញ់ព្រាយ វគ្គ2", image: "/Content-imgae-Popular/ប្រមាញ់ព្រាយ វគ្គ2.jpg", duration: "1 ម៉ោង 40 នាទី",  },
+          { id: 3, title: "សំណើចគ្រួសារសេដ្ឋី​លា", image: "/Content-imgae-Popular/សំណើចគ្រួសារសេដ្ឋី​លា.jpg", duration: "1 ម៉ោង 57 នាទី", },
+          { id: 4, title: "ពិភពលោកធំធេង", image: "/Content-imgae-Popular/ពិភពលោកធំធេង.jpg", duration: "2 ម៉ោង 0 នាទី", },
+          { id: 5, title: "យុទ្ធសិល្ប៍ពស់ស", image: "/Content-imgae-Popular/យុទ្ធសិល្ប៍ពស់ស.jpg", duration: "1 ម៉ោង 30 នាទី",},
+          { id: 6, title: "គម្ពីតែងតាំងទេវតា", image: "/Content-imgae-Popular/គម្ពីតែងតាំងទេវតា.jpg", duration: "2 ម៉ោង 10 នាទី",  },
+        ],
+      };
+    },
+  };
+  </script>
+  
+  <style scoped>
+  </style>
+  

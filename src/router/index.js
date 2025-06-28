@@ -4,7 +4,9 @@ import Chinese from '@/components/Chinese.vue';
 import Indonesia from "@/components/Indonesia.vue";
 import Khmer from "@/components/Khmer.vue";
 import Thai from "@/components/Thai.vue";
+import India from '@/components/India.vue';
 import Contact from "@/components/Contact.vue";
+
 
 
 const routes = [
@@ -13,6 +15,7 @@ const routes = [
   { path: "/indonesia", name: 'Indonesia', component: Indonesia },
   { path: "/khmer",  name: 'khmer', component: Khmer },
   { path: "/thai",  name: 'Thai', component: Thai },
+  { path: "/india", name: 'India', component: India },
   { path: "/contact",  name: 'Contact', component: Contact },
 ];
 
